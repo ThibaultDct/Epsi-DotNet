@@ -1,0 +1,94 @@
+﻿@page "/fetchcategories"
+@inject HttpClient Http
+
+<h1>Categories</h1>
+
+<p>Fetch ChatonsBDD Categories.</p>
+
+@if (categories == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+<EditForm Model="@categorie" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+
+        <label>
+            Id :
+            <InputNumber @bind-Value="categorie.Id" />
+        </label>
+
+        <label>
+            Libelle :
+            <InputText @bind-Value="categorie.Libelle" />
+        </label>
+
+        <label>
+            Description :
+            <InputText @bind-Value="categorie.Description" />
+        </label>
+
+    <button type="submit">Ajouter</button>
+</EditForm>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Libelle</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var categorie in categories)
+    {
+        <tr>
+            <td>@categorie.Id</td>
+            <td>@categorie.Libelle</td>
+            <td>@categorie.Description</td>
+        </tr>
+    }
+    </tbody>
+</table>
+}
+
+@code {
+    private Categorie[] categories;
+    private Categorie categorie = new Categorie();
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = await Http.GetFromJsonAsync<Categorie[]>("https://localhost:44368/api/Categories");
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await Http.PostAsJsonAsync<Categorie>("https://localhost:44368/api/Categories", categorie);
+        categories = await Http.GetFromJsonAsync<Categorie[]>("https://localhost:44368/api/Categories");
+    }
+
+
+    public class Chaton
+    {
+        public string Nom { get; set; }
+
+        public DateTime DateDeNaissance { get; set; }
+
+        public bool Sterilise { get; set; }
+
+        public bool EstUneFemelle { get; set; }
+    }
+
+    public class Categorie
+    {
+        public int Id { get; set; }
+
+        public string Libelle { get; set; }
+
+        public string Description { get; set; }
+
+        public List<Chaton> Chatons { get; set; }
+    }
+}

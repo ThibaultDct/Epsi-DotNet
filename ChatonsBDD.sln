@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatonsBDD.ORM", "ChatonsBDD.ORM\ChatonsBDD.ORM.csproj", "{888140B8-5CC0-4FEC-9624-DF38B0174A0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatonsBDD.Web", "ChatonsBDD.Web\ChatonsBDD.Web.csproj", "{35A5532D-52E5-4575-B306-0A85B90888AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatonsBDD.API", "ChatonsBDD.API\ChatonsBDD.API.csproj", "{10A4351C-3717-423D-B175-7755B25FEC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatonsBDD.Blazor", "ChatonsBDD.Blazor\ChatonsBDD.Blazor.csproj", "{22B88DF7-484B-4FFE-9FF1-88A401002CF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{888140B8-5CC0-4FEC-9624-DF38B0174A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888140B8-5CC0-4FEC-9624-DF38B0174A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888140B8-5CC0-4FEC-9624-DF38B0174A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888140B8-5CC0-4FEC-9624-DF38B0174A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A5532D-52E5-4575-B306-0A85B90888AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A5532D-52E5-4575-B306-0A85B90888AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A5532D-52E5-4575-B306-0A85B90888AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A5532D-52E5-4575-B306-0A85B90888AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A4351C-3717-423D-B175-7755B25FEC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A4351C-3717-423D-B175-7755B25FEC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A4351C-3717-423D-B175-7755B25FEC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A4351C-3717-423D-B175-7755B25FEC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B88DF7-484B-4FFE-9FF1-88A401002CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B88DF7-484B-4FFE-9FF1-88A401002CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B88DF7-484B-4FFE-9FF1-88A401002CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B88DF7-484B-4FFE-9FF1-88A401002CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {389F77CB-69A7-47BA-8F18-DBE8B11E339E}
+	EndGlobalSection
+EndGlobal
